@@ -104,9 +104,9 @@ MIT © ol3xi
 
 ## 🔗 Links
 
-- [Live Demo](https://your-demo-link.vercel.app)
-- [Report Bug](https://github.com/YOUR-USERNAME/dashboard-components/issues)
-- [Request Feature](https://github.com/YOUR-USERNAME/dashboard-components/issues)
+- [Live Demo](https://dashboard-components-lilac.vercel.app/)
+- [Report Bug](https://github.com/Ol3xi/dashboard-components/issues)
+- [Request Feature](https://github.com/Ol3xi/dashboard-components/issues)
 
 ---
 
