@@ -2,9 +2,9 @@
 
 > Professional, type-safe dashboard components for React + TypeScript
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-blue)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-blue)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1-blue)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ![Dashboard Components Preview](screenshots/screenshot-hero.png)
