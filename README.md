@@ -11,8 +11,8 @@
 
 ## ✨ Features
 
-- 🎨 **6 Color Variants** - Blue, Green, Purple, Orange, Red, Gray
-- 📏 **3 Size Options** - Small, Medium, Large
+- 🎨 **Multiple Components** - Stats cards, Progress indicators, and more
+- 📏 **Size Variants** - Small, Medium, Large options
 - 🌓 **Dark Mode** - Built-in dark theme support
 - 📱 **Responsive** - Mobile-first design
 - ⚡ **TypeScript** - 100% type-safe
@@ -76,9 +76,95 @@ import { StatsCard } from './components/StatsCard';
 ![Color Red](screenshots/screenshot-color-red.png)
 Available colors: `blue`, `green`, `purple`, `orange`, `red`, `gray`
 
+### 2. ProgressCard
+
+A flexible progress indicator component with multiple visualization types.
+
+```tsx
+import { Target } from 'lucide-react';
+import { ProgressCard } from './components/ProgressCard';
+
+
+```
+
+#### ProgressCard Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | `string` | - | Card title (required) |
+| `value` | `number` | - | Progress value 0-100 (required) |
+| `icon` | `LucideIcon` | - | Icon component from lucide-react |
+| `type` | `'linear' \| 'circular' \| 'stepped'` | `'linear'` | Progress visualization type |
+| `label` | `string` | - | Label to show on progress |
+| `description` | `string` | - | Additional description text |
+| `variant` | `ColorVariant` | `'blue'` | Color variant |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Card size |
+| `showPercentage` | `boolean` | `true` | Show percentage value |
+| `animated` | `boolean` | `true` | Enable animations |
+| `totalSteps` | `number` | `5` | Total steps (for stepped type) |
+| `currentStep` | `number` | `0` | Current step (for stepped type) |
+| `footer` | `ReactNode` | - | Custom footer content |
+| `onClick` | `() => void` | - | Click handler function |
+
+#### Progress Types
+
+**Linear Progress:**
+![Linear Progress](screenshots/linear-progress.png)
+
+```tsx
+
+```
+
+**Circular Progress:**
+![Circular Progress](screenshots/circular-progress.png)
+
+```tsx
+
+```
+
+**Stepped Progress:**
+![Stepped Progress](screenshots/stepped-progress.png)
+```tsx
+
+```
+
+## 🎨 Color Variants
+
+Both components support 6 color variants:
+- `blue` (default)
+- `green`
+- `purple`
+- `orange`
+- `red`
+- `gray`
+
+```tsx
+
+
+```
+
+## 📏 Size Variants
+
+All components come in 3 sizes:
+- `sm` - Small
+- `md` - Medium (default)
+- `lg` - Large
+
+```tsx
+
+
+```
+
+## 🎯 Examples
+
+### Dashboard Overview
+
+```tsx
+
+
 ## 📱 Responsive Design
 
-![Mobile View](screenshots/screenshot-mobile.png)
+![Mobile View](screenshots/screenshot-progress-mobile.png)
 
 Works perfectly on all screen sizes.
 
@@ -93,10 +179,12 @@ Works perfectly on all screen sizes.
 ## 📝 Roadmap
 
 - [x] StatsCard component
-- [ ] ProgressCard (Coming soon)
-- [ ] ChartCard (Coming soon)
-- [ ] TableCard (Coming soon)
-- [ ] ActivityCard (Coming soon)
+- [x] ProgressCard component (Linear, Circular, Stepped)
+- [ ] ChartCard - Mini charts with Recharts
+- [ ] TableCard - Sortable data tables
+- [ ] ActivityCard - Activity feed timeline
+- [ ] MetricCard - Advanced metric comparison
+- [ ] Complete dashboard templates
 
 ## 🤝 Contributing
 
