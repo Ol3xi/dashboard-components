@@ -20,6 +20,7 @@
 - ♿ **Accessible** - ARIA compliant
 
 ## 🚀 Quick Start
+
 ```bash
 # Clone the repository
 git clone https://github.com/YOUR-USERNAME/dashboard-components.git
@@ -36,9 +37,10 @@ npm run dev
 ### StatsCard
 
 A versatile card component for displaying statistics and metrics.
+
 ```tsx
-import { DollarSign } from 'lucide-react';
-import { StatsCard } from './components/StatsCard';
+import { DollarSign } from "lucide-react";
+import { StatsCard } from "./components/StatsCard";
 
 <StatsCard
   title="Total Revenue"
@@ -48,23 +50,23 @@ import { StatsCard } from './components/StatsCard';
   description="from last month"
   icon={DollarSign}
   variant="green"
-/>
+/>;
 ```
 
 #### Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | `string` | - | Card title (required) |
-| `value` | `string \| number` | - | Main value to display (required) |
-| `icon` | `LucideIcon` | - | Icon component |
-| `change` | `string` | - | Change percentage |
-| `changeType` | `'positive' \| 'negative' \| 'neutral'` | `'neutral'` | Change indicator color |
-| `description` | `string` | - | Additional description |
-| `variant` | `ColorVariant` | `'blue'` | Color variant |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Card size |
-| `animated` | `boolean` | `true` | Enable fade-in animation |
-| `onClick` | `() => void` | - | Click handler |
+| Prop          | Type                                    | Default     | Description                      |
+| ------------- | --------------------------------------- | ----------- | -------------------------------- |
+| `title`       | `string`                                | -           | Card title (required)            |
+| `value`       | `string \| number`                      | -           | Main value to display (required) |
+| `icon`        | `LucideIcon`                            | -           | Icon component                   |
+| `change`      | `string`                                | -           | Change percentage                |
+| `changeType`  | `'positive' \| 'negative' \| 'neutral'` | `'neutral'` | Change indicator color           |
+| `description` | `string`                                | -           | Additional description           |
+| `variant`     | `ColorVariant`                          | `'blue'`    | Color variant                    |
+| `size`        | `'sm' \| 'md' \| 'lg'`                  | `'md'`      | Card size                        |
+| `animated`    | `boolean`                               | `true`      | Enable fade-in animation         |
+| `onClick`     | `() => void`                            | -           | Click handler                    |
 
 ## 🎨 Color Variants
 
@@ -81,30 +83,28 @@ Available colors: `blue`, `green`, `purple`, `orange`, `red`, `gray`
 A flexible progress indicator component with multiple visualization types.
 
 ```tsx
-import { Target } from 'lucide-react';
-import { ProgressCard } from './components/ProgressCard';
-
-
+import { Target } from "lucide-react";
+import { ProgressCard } from "./components/ProgressCard";
 ```
 
 #### ProgressCard Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `title` | `string` | - | Card title (required) |
-| `value` | `number` | - | Progress value 0-100 (required) |
-| `icon` | `LucideIcon` | - | Icon component from lucide-react |
-| `type` | `'linear' \| 'circular' \| 'stepped'` | `'linear'` | Progress visualization type |
-| `label` | `string` | - | Label to show on progress |
-| `description` | `string` | - | Additional description text |
-| `variant` | `ColorVariant` | `'blue'` | Color variant |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Card size |
-| `showPercentage` | `boolean` | `true` | Show percentage value |
-| `animated` | `boolean` | `true` | Enable animations |
-| `totalSteps` | `number` | `5` | Total steps (for stepped type) |
-| `currentStep` | `number` | `0` | Current step (for stepped type) |
-| `footer` | `ReactNode` | - | Custom footer content |
-| `onClick` | `() => void` | - | Click handler function |
+| Prop             | Type                                  | Default    | Description                      |
+| ---------------- | ------------------------------------- | ---------- | -------------------------------- |
+| `title`          | `string`                              | -          | Card title (required)            |
+| `value`          | `number`                              | -          | Progress value 0-100 (required)  |
+| `icon`           | `LucideIcon`                          | -          | Icon component from lucide-react |
+| `type`           | `'linear' \| 'circular' \| 'stepped'` | `'linear'` | Progress visualization type      |
+| `label`          | `string`                              | -          | Label to show on progress        |
+| `description`    | `string`                              | -          | Additional description text      |
+| `variant`        | `ColorVariant`                        | `'blue'`   | Color variant                    |
+| `size`           | `'sm' \| 'md' \| 'lg'`                | `'md'`     | Card size                        |
+| `showPercentage` | `boolean`                             | `true`     | Show percentage value            |
+| `animated`       | `boolean`                             | `true`     | Enable animations                |
+| `totalSteps`     | `number`                              | `5`        | Total steps (for stepped type)   |
+| `currentStep`    | `number`                              | `0`        | Current step (for stepped type)  |
+| `footer`         | `ReactNode`                           | -          | Custom footer content            |
+| `onClick`        | `() => void`                          | -          | Click handler function           |
 
 #### Progress Types
 
@@ -112,25 +112,51 @@ import { ProgressCard } from './components/ProgressCard';
 ![Linear Progress](screenshots/linear-progress.png)
 
 ```tsx
-
+<ProgressCard
+  title="Project Completion"
+  value={75}
+  type="linear"
+  icon={Target}
+  variant="green"
+  description="On track for deadline"
+/>
 ```
 
 **Circular Progress:**
 ![Circular Progress](screenshots/circular-progress.png)
 
 ```tsx
-
+<ProgressCard
+  title="Goal Achievement"
+  value={85}
+  type="circular"
+  icon={Award}
+  variant="green"
+  label="Complete"
+  description="Excellent progress!"
+/>
 ```
 
 **Stepped Progress:**
 ![Stepped Progress](screenshots/stepped-progress.png)
-```tsx
 
+```tsx
+<ProgressCard
+  title="Onboarding Progress"
+  value={60}
+  type="stepped"
+  icon={CheckCircle2}
+  variant="blue"
+  totalSteps={5}
+  currentStep={3}
+  description="3 steps completed"
+/>
 ```
 
 ## 🎨 Color Variants
 
 Both components support 6 color variants:
+
 - `blue` (default)
 - `green`
 - `purple`
@@ -140,18 +166,17 @@ Both components support 6 color variants:
 
 ```tsx
 
-
 ```
 
 ## 📏 Size Variants
 
 All components come in 3 sizes:
+
 - `sm` - Small
 - `md` - Medium (default)
 - `lg` - Large
 
 ```tsx
-
 
 ```
 
@@ -205,3 +230,4 @@ MIT © ol3xi
 **Built with ❤️ by ol3xi**
 
 If you found this useful, please give it a ⭐️!
+```
