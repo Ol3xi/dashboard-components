@@ -1,13 +1,13 @@
 import type { LucideIcon } from "lucide-react"
 import type { ReactNode } from "react"
 
-/* Varianti di colore disponibili per la card */
+/* Color variations available for the cards */
 export type ColorVariant = 'blue' | 'green' | 'purple' | 'orange' | 'red' | 'gray';
 
-/* Dimensioni disponibili per la card */
+/* Card sizes available */
 export type SizeVariant = 'sm' | 'md' | 'lg';
 
-/* Props per il componente StatsCard */
+/* Props for the StatsCard component */
 export type StatsCardProp = {
     title: string;
     value: string | number;
@@ -23,7 +23,7 @@ export type StatsCardProp = {
     className: string;
 };
 
-/* Configurazione dei colori per le diverse varianti */
+/* Configuring colors for different variants */
 
 const colorVariants: Record<ColorVariant, {
     bg: string;
@@ -122,7 +122,7 @@ const StatsCard = ({ title, value, icon: Icon, change, changeType = 'neutral', d
             `}
         >
             <div className={sizes.padding}>
-                {/* Header con icona */}
+                {/* Header with icon */}
                 <div className="flex items-start justify-between mb-4">
                     <div>
                         <p className={`${sizes.titleSize} font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide`}>
@@ -136,14 +136,14 @@ const StatsCard = ({ title, value, icon: Icon, change, changeType = 'neutral', d
                     )}
                 </div>
 
-                {/* Valore principale */}
+                {/* Main value */}
                 <div className="mb-2">
                     <h3 className={`${sizes.valueSize} font-bold text-gray-900 dark:text-white`}>
                         {value}
                     </h3>
                 </div>
 
-                {/* Change indicator e descrizione */}
+                {/* Change indicator and description*/}
                 <div className="flex items-center gap-2 flex-wrap">
                     {change && (
                         <span className={`text-sm font-semibold ${changeColorClass}`}>
