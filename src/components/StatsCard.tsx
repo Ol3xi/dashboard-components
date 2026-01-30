@@ -115,7 +115,7 @@ const StatsCard = ({ title, value, icon: Icon, change, changeType = 'neutral', d
                 border border-gray-200 dark:border-slate-700
                 shadow-sm hover:shadow-md
                 transition-all duration-300
-                ${onClick ? 'cursor-pointer' : ''}
+                ${onClick !== undefined ? 'cursor-pointer' : ''}
                 ${colors.hover}
                 ${animated ? 'animate-fade-in' : ''}
                 ${className}
@@ -143,7 +143,7 @@ const StatsCard = ({ title, value, icon: Icon, change, changeType = 'neutral', d
                     </h3>
                 </div>
 
-                {/* Change indicator and description*/}
+                {/* Change indicator and description\*/}
                 <div className="flex items-center gap-2 flex-wrap">
                     {change && (
                         <span className={`text-sm font-semibold ${changeColorClass}`}>
