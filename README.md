@@ -176,9 +176,6 @@ All components come in 3 sizes:
 - `md` - Medium (default)
 - `lg` - Large
 
-```tsx
-
-```
 
 ## 🎯 Examples
 
