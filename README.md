@@ -68,8 +68,12 @@ import { StatsCard } from './components/StatsCard';
 
 ## 🎨 Color Variants
 
-![Color Variants](screenshots/screenshot-colors.png)
-
+![Color Blue](screenshots/screenshot-color-blue.png)
+![Color Gray](screenshots/screenshot-color-gray.png)
+![Color Green](screenshots/screenshot-color-green.png)
+![Color Orange](screenshots/screenshot-color-orange.png)
+![Color Purple](screenshots/screenshot-color-purple.png)
+![Color Red](screenshots/screenshot-color-red.png)
 Available colors: `blue`, `green`, `purple`, `orange`, `red`, `gray`
 
 ## 📱 Responsive Design
